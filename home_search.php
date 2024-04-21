@@ -42,7 +42,7 @@ else {
         echo "<td>" . $row['ename'] . "</td>";
         echo "<td>" . $row['title'] . "</td>";
         echo "<td>" . $row['postdate'] . "</td>";
-        echo "<td>" . substr($row['jprofile'],0,120) . "......</td>";  
+        echo "<td>" . substr($row['profile'],0,120) . "......</td>";  
         echo "</tr>";
     }
     echo "<h4> <a href='login.php'>Login to view more</a> </h4>";
