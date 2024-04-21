@@ -1,4 +1,3 @@
-console.log("working");
 function validate(type,field, query) {
 var xmlhttp;
 if (window.XMLHttpRequest) { // for IE7+, Firefox, Chrome, Opera, Safari
@@ -12,9 +11,9 @@ document.getElementById(field).innerHTML = "Validating..";
 } else if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 document.getElementById(field).innerHTML = xmlhttp.responseText;
 } else {
-document.getElementById(field).innerHTML = "Error Occurred. <a href='index.php'>Reload Or Try Again</a> the page.";
+document.getElementById(field).innerHTML = "Error Occurred. <a href='../index.php'>Reload Or Try Again</a> the page.";
 }
 }
-xmlhttp.open("GET", "/job_portal/js/valid.php?type=" + type + "&query=" + query, true);
+xmlhttp.open("GET", "/jobGURU/js/valid.php?type=" + type + "&query=" + query, true);
 xmlhttp.send();
 }

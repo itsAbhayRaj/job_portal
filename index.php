@@ -13,7 +13,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
       
-        <title> Job Portal </title>
+        <title> Job GURU </title>
         <script type="application/javascript">
             $(document).ready(function(){
                 // Add smooth scrolling to all links in navbar + footer link
@@ -52,14 +52,14 @@
 <nav class="navbar" id="insidenav">
   <div class="container-fluid">
       <div class="navbar-header">
-          <a class="navbar-brand" href="#">Job Portal</a>
+          <a class="navbar-brand" href="#">Job GURU</a>
       </div>
 
     <ul class="nav navbar-nav">
-      <li class="active"><a data-toggle="tab" href="#main1">Home</a></li>
+      <li class="active"><a data-toggle="tab" href="#">Home</a></li>
         <li><a data-toggle="tab" href="#recent">Recent Jobs</a></li>
-      <li><a data-toggle="tab" href="#jobseeker">Job Seeker</a></li>
-      <li><a data-toggle="tab" href="#">Employer</a></li>
+      <li><a  href="jobseeker/register_user.php">Job Seeker</a></li>
+      <li><a data-toggle="tab" href="employer/register_emp.php">Employer</a></li>
       <li><a data-toggle="tab" href="#contact">Contact Us</a></li>
     </ul>
 
@@ -81,26 +81,26 @@
 <div class="bmsTop">
     <ul>
         <li style="font-size: 15px; font-weight: bold">Top Recruiters:</li>
-        <li><a href="#" target="_blank">
-                <img src="images/1.gif" border="0">
+        <li><a href="https://careers.cognizant.com/in/en" target="_blank">
+                <img src="images/1.gif">
             </a></li>
-        <li><a href="#" target="_blank">
-                <img src="images/2.gif" border="0">
+        <li><a href="https://www.interglobe.com/careers" target="_blank">
+                <img src="images/2.gif" >
             </a></li>
-        <li><a href="#" target="_blank">
-                <img src="images/3.gif" border="0"></a>
+        <li><a href="https://www.polaris.com/en-us/careers/" target="_blank">
+                <img src="images/3.gif" ></a>
         </li>
-        <li><a href="#" target="_blank">
-                <img src="images/4.gif" border="0"></a></li>
-        <li><a href="#" target="_blank">
-                <img src="images/5.gif" border="0"></a>
+        <li><a href="https://www.genpact.com/careers" target="_blank">
+                <img src="images/4.gif" ></a></li>
+        <li><a href="https://www.synechron.com/en-in" target="_blank">
+                <img src="images/5.gif" ></a>
         </li>
     </ul>
 </div>
 
 <div class="container-fluid" id="main1"> <!-- jumbotron fluid -->
 <div class="jumbotron text-center" id="searchjum">
-<h1>Job Portal</h1>
+<h1>Job GURU</h1>
     <p>Search for Jobs</p>
     <form class="form-inline" id="homesearch">
         <input type="text" class="form-control" size="50" placeholder="Enter your search keyword" name="keyword" id="keyword">
@@ -235,7 +235,7 @@
     <a href="#insidenav" title="To Top">
         <span class="glyphicon glyphicon-chevron-up"></span>
     </a>
-    <p>Job Portal</p>
+    <p>Job GURU</p>
 </footer>
 </body>
     <script src="js/jquery-1.12.0.min.js"></script>

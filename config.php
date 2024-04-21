@@ -19,4 +19,5 @@ $db2 = new mysqli($host, $user, $password, $database2);
     echo "Database location is connected.";
 }
 */
+
 ?>

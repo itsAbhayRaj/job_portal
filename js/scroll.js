@@ -1,6 +1,4 @@
-/**
- * Created by Sreelal on 12-04-2016.
- */
+
 $(document).ready(function(){
     // Add smooth scrolling to all links in navbar + footer link
     $(".navbar a, footer a[href='#insidenav']").on('click', function(event) {

@@ -20,5 +20,4 @@ Copy and paste below script to add city state country list in your website
 ```  
 
 
-Demo Link: http://www.iamrohit.in/tag/php-ajax-country-state-city-dropdown
 
