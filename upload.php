@@ -26,7 +26,7 @@ function upload_image(){
     $filesize = $_FILES["file"]["size"];
     $allowed_file_types = array('.jpeg','.png','.jpg','.JPEG','.JPG');
 
-    if (in_array($file_ext,$allowed_file_types) && ($filesize < 200000))
+    if (in_array($file_ext,$allowed_file_types) && ($filesize < 2000000))
     {    
         // Rename file
         $newfilename = $_SESSION['jsname'].$_SESSION['jsid'] . $file_ext;
@@ -151,7 +151,7 @@ $filename = $_FILES["file"]["name"];
     $filesize = $_FILES["file"]["size"];
     $allowed_file_types = array('.doc','.docx','.pdf');
     echo $file_ext;
-    if (in_array($file_ext,$allowed_file_types) && ($filesize < 2000000))
+    if (in_array($file_ext,$allowed_file_types) && ($filesize < 20000000))
     {
         // Rename file
         $newfilename = $_SESSION['jsname'].$_SESSION['jsid'] . $file_ext;
@@ -179,7 +179,7 @@ $filename = $_FILES["file"]["name"];
         // file selection error
         echo "Please select a file to upload.";
     }
-    elseif ($filesize > 500000)
+    elseif ($filesize > 5000000)
     {
         // file size error
         echo "The file you are trying to upload is too large.";
