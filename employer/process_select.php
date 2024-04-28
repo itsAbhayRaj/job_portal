@@ -3,7 +3,7 @@
 session_start();
 include_once('../config.php');
 //echo "hello its working";
-$user_id=$_GET['user'];
+$user_id=$_GET['user']; 
 $emp_id=$_GET['emp'];
 $job_id=$_GET['job'];
 //echo $user_id . "  " . $emp_id ." " . $job_id;
@@ -16,7 +16,10 @@ if(mysqli_num_rows($q)>0){
            <p style='font-size: 20px'><strong>Sorry!</strong> This user is already Selected for the job</p>
         </div>";
 }else{
+    mysqli_query($db1,"update application set status = 1 where job_id=$job_id and user_id= $user_id");
+
     $q2=mysqli_query($db1,"insert into selection(user_id,emp_id,job_id,date,status) VALUES ($user_id,$emp_id,$job_id,'$date',1)");
+    
     if($q2){
         echo " <div class='alert alert-success alert-dismissible' role='alert'>
             <button type='button' class='close'  data-dismiss='alert' aria-label='Close'><span

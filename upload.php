@@ -88,7 +88,7 @@ function upload_logo()
     $filesize = $_FILES["file"]["size"];
     $allowed_file_types = array('.jpeg','.png','.jpg','.JPEG','.JPG');
 
-    if (in_array($file_ext,$allowed_file_types) && ($filesize < 2000000))
+    if (in_array($file_ext,$allowed_file_types) && ($filesize < 20000000))
     {
         // Rename file
         $newfilename = $_SESSION['name'].$_SESSION['eid'] . $file_ext;

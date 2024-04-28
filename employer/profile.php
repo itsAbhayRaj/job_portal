@@ -1,16 +1,14 @@
 <?php
 
 include_once('../config.php');
-include_once('notify.php');
-//session_start();
-notify();
+session_start();
 $id = $_SESSION['elogid'];
 //echo $id;
 if(isset($_SESSION['elogid']))
 {
 $q = "select * from login join employer on login.log_id=employer.log_id WHERE login.log_id = $id";
 //echo $q;
-$result = mysqli_query($db1, $q);// or die("Selecting user profile failed");
+$result = mysqli_query($db1, $q);
 $row = mysqli_fetch_array($result);
 //  echo $row['log_id'];
     $_SESSION['eid']=$row['eid'];
@@ -33,6 +31,8 @@ if(isset($_GET['msg']) &&  $_GET['msg']=="jobposted") {
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../images/favicon.ico">
+
     <title>Welcome <?php echo $row['ename']; ?></title>
 </head>
 <body>
@@ -46,7 +46,7 @@ if(isset($_GET['msg']) &&  $_GET['msg']=="jobposted") {
                     <a class="navbar-brand" href="#">Job Portal</a>
                 </div>
                 <li class="active"><a href="#">Profile<span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Notifications&nbsp;&nbsp;<span class="badge">&nbsp;&nbsp;<?php echo $notifycount; ?></span></a></li>
+                <li><a href="#">Notifications</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu<span class="caret"></span></a>
                     <ul class="dropdown-menu">

@@ -1,17 +1,21 @@
 <?php
-
 include_once('notify.php');
-$q1=mysqli_query($db1,"select * from application where job_id=$_GET[jobid]");
-$q3=mysqli_query($db1,"select * from jobs where jobid = $_GET[jobid]");
-$q3row=mysqli_fetch_array($q3);
-$emp_id=$_SESSION['eid'];
+
+    $jobid = $_GET['jobid'];
+    $q1=mysqli_query($db1,"select * from application where job_id=$_GET[jobid]");
+    $q3=mysqli_query($db1,"select * from jobs where jobid = $_GET[jobid]");
+    $q3row=mysqli_fetch_array($q3);
+    $emp_id=$_SESSION['eid'];
+
 ?>
 <!DOCTYPE HTML>
 <html>
 <head>
-	<meta charset="utf-8">
+	<meta charset="utf-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../images/favicon.ico">
+
     <title>Manage Jobs</title>
     <script type="text/javascript">
         function selectJs(user,job,emp) {
@@ -113,6 +117,8 @@ $emp_id=$_SESSION['eid'];
             <th>Skills</th>
             <th>Applied Date</th>
             <th colspan="2">Actions</th>
+            
+           
             <?php
             while($row=mysqli_fetch_array($q1)) {
                 $i=1;
@@ -120,7 +126,9 @@ $emp_id=$_SESSION['eid'];
                 $q2=mysqli_query($db1,"select * from jobseeker where user_id = $user_id");
 
                 while ( $result = mysqli_fetch_array($q2) ) {
-                    $qsel=mysqli_query($db1,"select * from selection where job_id=$_GET[jobid] and user_id= $result[user_id]");
+                   
+                    $qsel = mysqli_query($db1, "SELECT * FROM selection WHERE job_id = $_GET[jobid] AND user_id = $result[user_id]");
+                    
                     $ressel=mysqli_fetch_array($qsel);
                     echo " <tr> ";
                     echo "<td>".$i."</td>";
@@ -129,20 +137,28 @@ $emp_id=$_SESSION['eid'];
                     echo "<td>" . $result['skills'] . "</td>";
                     echo "<td>" . $row['date_applied']."</td>";
                     if(mysqli_num_rows($qsel)==0) {
+                       
                         echo "<td> <button type='button' class='btn btn-success' onclick='selectJs(" . $user_id . "," . $_GET['jobid'] . "," . $emp_id . ");'>Select Candidate</button> </td>";
                         echo "<td> <button type='button' class='btn btn-danger' onclick='rejectJs(" . $user_id . "," . $_GET['jobid'] . "," . $emp_id . ");'>Reject Candidate</button> </td>";
+                        
                     }
                     else {
+                       
                         $qrej=mysqli_query($db1,"select * from application where job_id=$_GET[jobid] and user_id= $result[user_id] ");
+                        
                         $rowrej=mysqli_fetch_array($qrej);
-                        if($rowrej['status']==2)
+                        
+                        if($rowrej['status']==2){
                             echo "<td> <h4 style='color: red'>Rejected</h4> </td>";
+                        }else{
                         echo "<td> <h4 style='color: green'>Selected</h4> </td>";
+                        }
                     }
                     echo "<tr><td colspan='6'><div id='message'></div></td></tr>";
                     echo "</tr>";
+                    $i++;
                 }
-                $i++;
+                
             }
             ?>
         </table>
@@ -155,7 +171,7 @@ $emp_id=$_SESSION['eid'];
     }
     ?>
 </div>
-<!-- --------------------------------------------------------- contents end --------------------------------------------------------------------- -->
+<!------------------------------------------------------------------ contents end --------------------------------------------------------------------- -->
 </body>
 <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
 <link href="../css/main.css" rel="stylesheet">

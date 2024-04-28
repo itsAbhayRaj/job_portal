@@ -13,6 +13,8 @@ $query=mysqli_query($db1,"select * from jobs where eid = $_SESSION[eid]");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <META HTTP-EQUIV="refresh" CONTENT="60">
+<link rel="icon" type="image/png" href="../images/favicon.ico">
+
 <head>
     <title>Manage  Jobs</title>
 </head>
@@ -32,8 +34,7 @@ $query=mysqli_query($db1,"select * from jobs where eid = $_SESSION[eid]");
                     <ul class="dropdown-menu">
                         <li><a href="post_jobs.php">Post New Jobs</a></li>
                         <li><a href="#">Manage Jobs</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Manage Applicants</a></li>
+                        
                     </ul>
                 </li>
             </ul>

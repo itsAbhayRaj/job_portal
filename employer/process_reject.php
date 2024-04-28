@@ -5,10 +5,11 @@ include_once('../config.php');
 //echo "reject is working";
 $user_id=$_GET['user'];
 $emp_id=$_GET['emp'];
-$job_id=$_GET['job'];
+$job_id=$_GET['job'];  
 $q=mysqli_query($db1,"select * from application where job_id=$job_id and user_id= $user_id");
 $result=mysqli_fetch_array($q);
 if(mysqli_num_rows($q)>0 && $result['status']!=2){
+
     $q2=mysqli_query($db1,"update application set status = 2 where job_id=$job_id and user_id= $user_id");
     if($q2){
         echo " <div class='alert alert-success alert-dismissible' role='alert'>

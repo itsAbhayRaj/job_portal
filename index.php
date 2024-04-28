@@ -14,6 +14,7 @@
       
         <title> Job GURU </title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+        <link rel="icon" type="image/png" href="./images/favicon.ico">
 
         <script type="application/javascript">
             $(document).ready(function(){
