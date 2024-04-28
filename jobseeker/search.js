@@ -4,9 +4,9 @@
         var keyword=document.getElementById("keyword").value;
         // alert(keyword);
         var xmlhttp;
-        if (window.XMLHttpRequest) { // for IE7+, Firefox, Chrome, Opera, Safari
+        if (window.XMLHttpRequest) { 
             xmlhttp = new XMLHttpRequest();
-        } else { // for IE6, IE5
+        } else { 
             xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
         xmlhttp.onreadystatechange = function() {

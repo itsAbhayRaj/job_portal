@@ -1,9 +1,9 @@
 #searchjum{
-    background: #1abc9c;
+    background: #014b9600;
     color: #FFFFFF;
 }
 #insidenav{
-    background: #1abc9c;
+    background: linear-gradient(45deg, #014C96 2%, #0073E6 25%, #014C96 48%, #0073E6 77%, #014C96 98%);
     color: white;
     font-size: 13px;
 }
@@ -17,17 +17,17 @@ nav ul li {
     font-family: ubuntu;
 }
 li.active{
-    background: cadetblue;
+    background: #014C96;
 }
 #subcontent{
-    background: lavender;0
-color: black;
+    background: lavender;
+    color: black;
     font-size: 13px;
 }
 footer .glyphicon {
     font-size: 20px;
     margin-bottom: 20px;
-    color: #f4511e;
+    color: #aed1e6;
 }
 div.bmsTop{
     list-style-type: none;
@@ -42,7 +42,7 @@ div.bmsTop ul li{
     overflow: hidden;
 }
 .panel {
-    border: 1px solid #f4511e;
+    border: 1px solid #aed1e6;
     border-radius:0;
     transition: box-shadow 0.5s;
 }
@@ -52,14 +52,14 @@ div.bmsTop ul li{
 }
 
 .panel-footer .btn:hover {
-    border: 1px solid #f4511e;
+    border: 1px solid #aed1e6;
     background-color: #fff !important;
-    color: #f4511e;
+    color: #aed1e6;
 }
 
 .panel-heading {
     color: #fff !important;
-    background-color: #f4511e !important;
+    background: linear-gradient(45deg, #014C96 2%, #0073E6 25%, #014C96 48%, #0073E6 77%, #014C96 98%);
     padding: 25px;
     border-bottom: 1px solid transparent;
     border-top-left-radius: 0px;
@@ -83,12 +83,14 @@ div.bmsTop ul li{
 
 .panel-footer .btn {
     margin: 15px 0;
-    background-color: #f4511e;
+    background: linear-gradient(45deg, #014C96 2%, #0073E6 25%, #014C96 48%, #0073E6 77%, #014C96 98%);
     color: #fff;
 }
 body{
     background-image: url("../images/bg2.jpg");
-    font-family: Ubuntu ;
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
     font-weight: normal;
     font-size: 16px;
 

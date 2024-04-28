@@ -71,12 +71,7 @@
     </div>
 
 <div class="col-sm-10">
-    <br> <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    
 </div>
 <div class="container col-sm-10 pull-right" >
 

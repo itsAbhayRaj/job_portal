@@ -1,5 +1,6 @@
 <?php
 ?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -12,6 +13,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
       
         <title> Job GURU </title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+
         <script type="application/javascript">
             $(document).ready(function(){
                 $(".navbar a, footer a[href='#insidenav']").on('click', function(event) 
@@ -33,7 +36,7 @@
                         }
                     });
                 });
-            })
+            
         </script>
     </head>   
 <nav class="navbar" id="insidenav">
@@ -42,12 +45,12 @@
           <a class="navbar-brand" href="#">Job GURU</a>
       </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a data-toggle="tab" href="#">Home</a></li>
-        <li><a data-toggle="tab" href="#recent">Recent Jobs</a></li>
+      <li class="active"><a  href="#">Home</a></li>
+        <li><a  href="#recent">Recent Jobs</a></li>
       <li><a  href="jobseeker/register_user.php">Job Seeker</a></li>
-      <li><a data-toggle="tab" href="employer/register_emp.php">Employer</a></li>
-      <li><a data-toggle="tab" href="#contact">Contact Us</a></li>
-    </ul>[]
+      <li><a  href="employer/register_emp.php">Employer</a></li>
+      <li><a  href="#contact">Contact Us</a></li>
+    </ul>
     <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <span class="glyphicon glyphicon-user"></span> Register <span class="caret"></span></a>
@@ -85,8 +88,8 @@
 
 <div class="container-fluid" id="main1"> 
 <div class="jumbotron text-center" id="searchjum">
-<h1>Job GURU</h1>
-    <p>Search for Jobs</p>
+<h1 style="color:#1c4980;font-family: Inter, sans-serif !important ">Find the <span style="color:#000000;font-family: Inter, sans-serif !important">Right Job</span> In the<br/><span style="color:#000000;font-family: Inter, sans-serif !important">Right Companies</span></h1>
+    <p style="color:#1c4980; font-family: Inter, sans-serif !important">Got fired..!! Get Ready to be hired</p>
     <form class="form-inline" id="homesearch">
         <input type="text" class="form-control" size="50" placeholder="Enter your search keyword" name="keyword" id="keyword">
         <button type="button" onclick="search()" class="btn btn-lg " style="color: black"><span class="glyphicon glyphicon-search"></span> Search</button>
@@ -97,7 +100,7 @@
 <div class="container" id="subcontent" style="background: transparent">
  
 </div>
-<div class="page-header" style="background:#1abc9c"></div>
+<div class="page-header" style="background:linear-gradient(45deg, #014C96 2%, #0073E6 25%, #014C96 48%, #0073E6 77%, #014C96 98%)"></div>
 <div class="container-fluid" style="background: transparent">
     <div class="text-center">
         <h2>Register</h2>
@@ -155,21 +158,21 @@
 
 
     <div class="container bg-grey" id="contact">
-        <div class="page-header" style="background: #f4511e"></div>
+        <div class="page-header" style="background: linear-gradient(45deg, #014C96 2%, #0073E6 25%, #014C96 48%, #0073E6 77%, #014C96 98%)"></div>
         <h2 class="text-center">CONTACT US</h2>
         <div class="page-header"></div>
         <div class="row">
             <div class="col-sm-5">
                 <p>Contact us and we'll get back to you within 24 hours.</p>
-                <p><span class="glyphicon glyphicon-map-marker"></span> Kozhikode, India</p>
-                <p><span class="glyphicon glyphicon-phone"></span> +91 8943 202726</p>
-                <p><span class="glyphicon glyphicon-envelope"></span> info@jobportal.com</p>
+                <p><span class="glyphicon glyphicon-map-marker"></span> Greater Noida, India</p>
+                <p><span class="glyphicon glyphicon-phone"></span> +91 8423130604</p>
+                <p><span class="glyphicon glyphicon-envelope"></span> abhayraj14444@gmail.com</p>
             </div>
-
+        
             <div class="col-sm-7">
                 <div class="row">
                     <div class="col-sm-6 form-group">
-                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                        <input  class="form-control" id="name" name="name" placeholder="Name" type="text" required>
                     </div>
                     <div class="col-sm-6 form-group">
                         <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
@@ -178,44 +181,25 @@
                 <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
                 <div class="row">
                     <div class="col-sm-12 form-group">
-                        <button class="btn btn-default pull-right" type="submit">Send</button>
+                        <button onclick="window.location.href = './index.php';" class="btn btn-default pull-right" type="submit">Send</button>
                     </div>
                 </div>
             </div>
+        
         </div>
-    </div> <!-- Contact -->
+    </div> 
 
-</div> <!-- sub content -->
- <div class="page-header" style="background: #f4511e"></div>
-</div> <!-- Container -->
-<!-- Set height and width with CSS -->
-<div id="googleMap" style="height:400px;width:100%;"></div>
+</div>
+ <div class="page-header" style="background: linear-gradient(45deg, #014C96 2%, #0073E6 25%, #014C96 48%, #0073E6 77%, #014C96 98%)"></div>
+</div> 
+
 
 <!-- Add Google Maps -->
-<script src="http://maps.googleapis.com/maps/api/js"></script>
-<script>
-    var myCenter = new google.maps.LatLng(11.2680519,75.7891479);
+<iframe style="width: 100%;" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.959193399208!2d77.58161751020953!3d28.450646475663447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cbf94deb6bc39%3A0x7ba6bedc9a2b537f!2sBennett%20University%20(Times%20of%20India%20Group)!5e0!3m2!1sen!2sin!4v1714215785371!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+</iframe>
 
-    function initialize() {
-        var mapProp = {
-            center:myCenter,
-            zoom:12,
-            scrollwheel:false,
-            draggable:false,
-            mapTypeId:google.maps.MapTypeId.ROADMAP
-        };
 
-        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
-        var marker = new google.maps.Marker({
-            position:myCenter,
-        });
-
-        marker.setMap(map);
-    }
-
-    google.maps.event.addDomListener(window, 'load', initialize);
-</script>
 <footer class="container-fluid text-center">
     <a href="#insidenav" title="To Top">
         <span class="glyphicon glyphicon-chevron-up"></span>

@@ -15,7 +15,7 @@ $row = mysqli_fetch_array($result);
 //  echo $row['log_id'];
     $_SESSION['eid']=$row['eid'];
     $_SESSION['name']=$row['ename'];
-}
+} 
 else
 {
 header('location:../login.php?msg=please_login');

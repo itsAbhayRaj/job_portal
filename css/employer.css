@@ -1,5 +1,5 @@
 #insidenav{
-    background: #dd4814;
+    background: linear-gradient(45deg, #014C96 2%, #0073E6 25%, #014C96 48%, #0073E6 77%, #014C96 98%);
     color: white;
     font-size: 13px;
 }
@@ -17,7 +17,7 @@ nav ul li.active{
     background: whitesmoke;
 }
 nav ul li.active a{
-    color:#dd4814;;
+    color:#014C96;
 }
 table.table{
     background: transparent;
@@ -36,7 +36,7 @@ span.badge{
     color: black;
 }
 div.jumbotron{
-    background: lightgreen;
+    background: #007aff85;
     display: inline-block;
     font-family: ubuntu;
     font-weight: bold;

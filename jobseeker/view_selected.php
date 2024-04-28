@@ -18,7 +18,7 @@ include_once('../config.php');
                 xmlhttp = new XMLHttpRequest();
             } else { // for IE6, IE5
                 xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-            }
+            } 
             xmlhttp.onreadystatechange = function() {
                 if (xmlhttp.readyState != 4 && xmlhttp.status == 200) {
                     document.getElementById("message").innerHTML = "Processing..";
@@ -65,9 +65,9 @@ include_once('../config.php');
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Account Overview</a></li>
+                        <li><a href="./profile.php">Account Overview</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Account Settings</a></li>
+                        <li><a href="./profile.php">Account Settings</a></li>
 
                     </ul>
                 </li>

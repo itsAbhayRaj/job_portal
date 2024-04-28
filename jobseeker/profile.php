@@ -13,7 +13,7 @@ if(isset($_SESSION['id'])&& ($_SESSION['type']="jobseeker"))
     $_SESSION['jsname']=$row['name'];
     $_SESSION['jsid']=$row['user_id'];
 }
-else
+else 
 {
     header('location:../login.php?msg=please_login');
 }
@@ -89,9 +89,9 @@ else
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">Account Overview</a></li>
+                        <li><a href="./profile.php">Account Overview</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="#">Account Settings</a></li>
+                        <li><a href="./profile.php">Account Settings</a></li>
                    </ul>
                 </li>
                 <li><a href="../logout">Logout</a></li>

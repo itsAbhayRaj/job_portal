@@ -60,38 +60,38 @@ $q1=mysqli_query($db1,"select * from application WHERE user_id=$jsid");
     <h3 class="text-center" style="margin-top: 50px; color: #265a88">You Applied for these jobs</h3>
     <div class='page-header' style='background:skyblue'></div>
      <?php if(mysqli_num_rows($q1)>0) { ?>
- <!-- <table class="table table-responsive" style="margin-top: 30px;">
+ <table class="table table-responsive" style="margin-top: 30px;">
         <th style="width:150px">Employer</th>
         <th>Job Title</th>
         <th>Job Description</th>
         <th>Date of Posting</th>
         <th>Date on Applied</th>
-        <th colspan="3">Actions</th> -->
+        <th colspan="3">Actions</th>
         <?php
         while($row=mysqli_fetch_array($q1)) {
-			$i=1;
+			$i=0;
             $job_id=$row['job_id'];
             $q2=mysqli_query($db1,"select * from jobs where jobid = $job_id");
             while ( $result = mysqli_fetch_array($q2) ) {
 				
                 $comp=mysqli_query($db1,"select * from employer WHERE eid = $result[eid]");
                 $rowcomp=mysqli_fetch_array($comp);
-                /*
+                
                 echo " <tr> ";
                 echo "<td> <a href='view_emp.php?id=".$rowcomp['eid']."'>".$rowcomp['ename']."</a>";
-                echo "<td>" . $result['title'] . "</td>";
+                echo "<td> <a style='color: green;'  href='view_jobs.php?jid=" . $result['jobid'] . "'>".$result['title']."</a> ";
                 echo "<td>" . substr($result['jobdesc'],0,120) ." .......</td>";
                 echo "<td>" . $result['postdate'] . "</td>";
                 echo "<td>" . $row['date_applied']."</td>";
                 echo "<td>  <a style='color: whitesmoke;'  href='view_jobs.php?jid=" . $result['jobid'] . "'><button type='button' class='btn btn-success'>View Job</button> </a></td>";
                 echo "</tr>";
-                */
+                
                
-               echo "<h3>[".$_GLOBALS[$i]."]  <a style='color: green;'  href='view_jobs.php?jid=" . $result['jobid'] . "'>".$result['title']."</a></h3>"; 
-               echo "<h4> Employer: <a href='view_emp.php?id=".$rowcomp['eid']."'>".$rowcomp['ename']."</a></h4>";
-               echo "<p>". substr($result['jobdesc'],0,120) ." .......</p>";
-               echo "<h4>Job Posted on: " . $result['postdate'] ."</h4>";
-               echo "<h4> Applied on: " . $row['date_applied']."</h4>";
+            //    echo "<h3>[".$_GLOBALS[$i]."]  <a style='color: green;'  href='view_jobs.php?jid=" . $result['jobid'] . "'>".$result['title']."</a></h3>"; 
+            //    echo "<h4> Employer: <a href='view_emp.php?id=".$rowcomp['eid']."'>".$rowcomp['ename']."</a></h4>";
+            //    echo "<p>". substr($result['jobdesc'],0,120) ." .......</p>";
+            //    echo "<h4>Job Posted on: " . $result['postdate'] ."</h4>";
+            //    echo "<h4> Applied on: " . $row['date_applied']."</h4>";
                 
             }
             echo "<hr style='background:blue;'>";

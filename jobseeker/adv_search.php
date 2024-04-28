@@ -15,7 +15,7 @@ if($company=="" || $location =="" || $desig =="" ||  $skills==""){
 
 }
 else{
-$query = "select * from jobs  where title = '$desig'  or (location LIKE '%" . $location . "%') or (jprofile LIKE '%" . $skills . "%') ";
+$query = "select * from jobs  where title = '$desig'  or (location LIKE '%" . $location . "%') or (profile LIKE '%" . $skills . "%') ";
 $result = mysqli_query($db1, $query);
 
 if (mysqli_num_rows($result) == 0)

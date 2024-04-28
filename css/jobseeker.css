@@ -1,5 +1,5 @@
 #insidenav{
-    background: dodgerblue;
+    background: linear-gradient(45deg, #014C96 2%, #0073E6 25%, #014C96 48%, #0073E6 77%, #014C96 98%);
     color: white;
     font-size: 13px;
 }

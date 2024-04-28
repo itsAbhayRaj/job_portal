@@ -29,7 +29,7 @@ $result=mysqli_fetch_array($query);
     }
     xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState != 4 && xmlhttp.status == 200) {
-    document.getElementById("tablecontentt").innerHTML = "Processing..";
+    document.getElementById("tablecontent").innerHTML = "Processing..";
     } else if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
     document.getElementById("tablecontent").innerHTML = xmlhttp.responseText;
     } else {

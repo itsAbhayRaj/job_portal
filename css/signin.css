@@ -2,6 +2,8 @@ body {
   
   padding-bottom: 40px;
  background-image: url("../images/login.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
 }
 
 .form-signin {
@@ -39,7 +41,7 @@ body {
   border-top-right-radius: 0;
 }
 #insidenav{
-  background: deepskyblue;
+  background: linear-gradient(45deg, #014C96 2%, #0073E6 25%, #014C96 48%, #0073E6 77%, #014C96 98%);
   color: whitesmoke;
   font-size: 13px;
 
